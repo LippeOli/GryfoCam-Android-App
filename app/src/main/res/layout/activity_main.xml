@@ -8,11 +8,22 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/captureImageView"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/captureImageView1"
+        android:layout_width="160dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="228dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/captureImageView2" />
+
+    <ImageView
+        android:id="@+id/captureImageView2"
+        android:layout_width="160dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="92dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -20,10 +31,10 @@
         android:id="@+id/captureImageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="262dp"
         android:text="Capture"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/captureImageView" />
+        app:layout_constraintTop_toTopOf="@+id/captureImageView1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
