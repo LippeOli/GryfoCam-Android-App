@@ -1,62 +1,169 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/captureImageView1"
-        android:layout_width="160dp"
-        android:layout_height="130dp"
-        android:layout_marginTop="172dp"
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="199dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:text="GRYFO APP"
+        android:textColor="#704B98"
+        android:textSize="26dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/captureImageView2" />
-
-    <ImageView
-        android:id="@+id/captureImageView2"
-        android:layout_width="160dp"
-        android:layout_height="130dp"
-        android:layout_marginTop="72dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/underlineView"
+        android:layout_width="340dp"
+        android:layout_height="2dp"
+        android:background="#704B98"
+        app:layout_constraintBottom_toBottomOf="@id/titleTextView"
+        app:layout_constraintEnd_toEndOf="@id/titleTextView"
+        app:layout_constraintStart_toStartOf="@id/titleTextView"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView" />
+
+    <FrameLayout
+        android:id="@+id/frame2"
+        android:layout_width="136dp"
+        android:layout_height="192dp"
+        android:layout_marginTop="160dp"
+        android:background="@drawable/background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.792"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/captureImageView2"
+            android:layout_width="110dp"
+            android:layout_height="174dp"
+            android:layout_gravity="center"
+            android:padding="8dp"
+            android:scaleType="centerCrop" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frame1"
+        android:layout_width="136dp"
+        android:layout_height="192dp"
+        android:layout_marginTop="160dp"
+        android:background="@drawable/background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.184"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/captureImageView1"
+            android:layout_width="110dp"
+            android:layout_height="174dp"
+            android:layout_gravity="center"
+            android:padding="8dp"
+            android:scaleType="centerCrop" />
+
+    </FrameLayout>
 
     <Button
         android:id="@+id/captureImageButton"
         android:layout_width="126dp"
         android:layout_height="49dp"
-        android:layout_marginTop="372dp"
+        android:layout_marginBottom="64dp"
+        android:fontFamily="sans-serif"
         android:text="Capture"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/captureImageView1" />
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/buttonConvert"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:text="Convert"
-        app:layout_constraintBottom_toTopOf="@+id/captureImageButton"
+    <TextView
+        android:id="@+id/apiResponseTextView"
+        android:layout_width="169dp"
+        android:layout_height="21dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/response"
+        android:gravity="center"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/responseTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/convertTextView"
+        android:layout_width="154dp"
+        android:layout_height="88dp"
+        android:layout_marginBottom="44dp"
+        android:background="@drawable/rounded_border"
+        android:padding="8dp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/captureImageButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/responseTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="68dp"
-        android:text=""
-        app:layout_constraintBottom_toTopOf="@+id/buttonConvert"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:text="response"
+        android:textAlignment="center"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/convertTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/numberView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginBottom="11dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:text="picture: 1"
+        android:textAlignment="center"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/frame1"
+        app:layout_constraintEnd_toStartOf="@+id/numberView2"
+        app:layout_constraintHorizontal_bias="0.017"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.625" />
+
+    <TextView
+        android:id="@+id/numberView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="124dp"
+        android:layout_marginBottom="11dp"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:text="picture: 2"
+        android:textAlignment="center"
+        android:textSize="14dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/frame2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.723"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.666" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
