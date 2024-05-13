@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Gryfo App</string>
+    <string name="capture">Capture</string>
+    <string name="api_request_failed">API request failed.</string>
 </resources>
