@@ -20,7 +20,7 @@ interface ApiService {
     )
 
     //TO DO: colocar autorização válida para a API
-    @Headers("Content-Type: application/json", "Authorization: {{partner_id}}:{{api_key}}")
+    @Headers("Content-Type: application/json", "Authorization: DesafioEstag:9sndf96soADfhnJSgnsJDFiufgnn9suvn498gBN9nfsDesafioEstag")
     @POST("face_match")
     fun faceMatch(@Body request: Request): Call<Response>
 }

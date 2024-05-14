@@ -78,7 +78,7 @@
         android:id="@+id/captureImageButton"
         android:layout_width="126dp"
         android:layout_height="49dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="92dp"
         android:fontFamily="sans-serif"
         android:text="Capture"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -101,8 +101,8 @@
 
     <TextView
         android:id="@+id/convertTextView"
-        android:layout_width="154dp"
-        android:layout_height="88dp"
+        android:layout_width="204dp"
+        android:layout_height="86dp"
         android:layout_marginBottom="44dp"
         android:background="@drawable/rounded_border"
         android:padding="8dp"
