@@ -119,7 +119,7 @@ class MainActivity : AppCompatActivity() {
                         apiResponseTextView.setTextColor(Color.GREEN)
                         apiResponseTextView.text = "Match: $match"
                     } else {
-                        apiResponseTextView.setTextColor(Color.RED)
+                        apiResponseTextView.setTextColor(Color.YELLOW)
                         apiResponseTextView.text = "No Match"
                     }
                     isProcessCompleted = true
